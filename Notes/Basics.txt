@@ -1,0 +1,30 @@
+- Inline style, style tag, or style sheet loaded in as a link
+    - If used in multiple pages, browser can cache it, which would make it faster
+- serif and sans-serif would use the browser default
+- Google fonts: add import link and the can access font
+- Selectors
+    - element to grab all of element
+    - class (.)
+    - id: need to be unique to a page (#)
+    - attributes: ([])
+- CSS case insensitive to use dash casing for names
+- Cascading: multiple rules can apply to the same elements. Resovled by specificity
+    - In dev tools, order they show will be the specificity
+    - Inline has the highest, then id, class
+        - Conflicting with same specificity, will take the latest one
+- Inheritance: stykes inherited from parent 
+    - ex. setting properties on the body
+    - pass down with minimal work
+    - Directly selecting (id, class) will have higher specificity than inherited
+- Combinators
+    - inherit: keyword that increases specificity of the inherited values for that element
+    - Narrow down which type of elements you want
+        - Adjacent Sibling: +
+            - Need sam parent and needs to come right after
+        - General Sibling: ~
+            - As long as there is a sibling on the same level
+        - Child: >
+            - Direct child
+        - Descendant: white space
+            - Just needs to be a descendant
+- Values couples to property
