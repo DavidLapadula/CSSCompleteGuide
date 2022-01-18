@@ -8,3 +8,14 @@
 - Block level elements default to full available width
     - 100% for height is what will be allowed by parent BUT height psrent like body is only as big as it needs to be
     - Height of element relative to height of page need to pass it down to ensure all parents are the full page
+- Width and height not included in values set
+    - Box-sizing: default is content-box which means w/h refers to content only
+    - Could user border-box to refer to padding and border as well
+    - can use universal selector to set box sizing to border-box
+- Styling a header
+    - using the display property: change between inline and block or inline-block
+        - inline-block useful for putting all the elements on one line
+    - block level will take full available width - items around it
+    - display: none is just to hide, does not remove from the dom
+- Calc function allows you to calculate w/h using diff values like % and px
+- Inline block behaviour: empty white space calculated as new element
