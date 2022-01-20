@@ -19,3 +19,15 @@
     - display: none is just to hide, does not remove from the dom
 - Calc function allows you to calculate w/h using diff values like % and px
 - Inline block behaviour: empty white space calculated as new element
+- text-decoration used to remove default browser behaviour
+- vertical-align used to make items vertically centered
+- Browser default has lowest priority, but applied to element directly so will override inheritance
+- pseudo classes: define style state of element
+    - ex :hover, :active
+    - can set rules for these events
+- pseudo eleement: style part of element
+    - ex ::first-letter, ::after
+         - with ::after can use content property to render items and style them
+- Should have a CTA item (button)   
+- css exeuted down to styles listed after will take effect - order will resolve the conflict
+- url('<path>') wil allow you to make background an image
