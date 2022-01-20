@@ -1,0 +1,33 @@
+- Box model
+    - css interprets every element as a box
+    - conten --> padding --> border --> margin
+- Shorthand - just faster way so can put all on one line. Combine multiple into single property
+- Broswer comes with certain defaults - can be overridden
+- Margin collapsing: adjacent margnins will overlap and the larger one will win
+- Dev tools will show long form properties that are implicitly set or set with shorthand
+- Block level elements default to full available width
+    - 100% for height is what will be allowed by parent BUT height psrent like body is only as big as it needs to be
+    - Height of element relative to height of page need to pass it down to ensure all parents are the full page
+- Width and height not included in values set
+    - Box-sizing: default is content-box which means w/h refers to content only
+    - Could user border-box to refer to padding and border as well
+    - can use universal selector to set box sizing to border-box
+- Styling a header
+    - using the display property: change between inline and block or inline-block
+        - inline-block useful for putting all the elements on one line
+    - block level will take full available width - items around it
+    - display: none is just to hide, does not remove from the dom
+- Calc function allows you to calculate w/h using diff values like % and px
+- Inline block behaviour: empty white space calculated as new element
+- text-decoration used to remove default browser behaviour
+- vertical-align used to make items vertically centered
+- Browser default has lowest priority, but applied to element directly so will override inheritance
+- pseudo classes: define style state of element
+    - ex :hover, :active
+    - can set rules for these events
+- pseudo eleement: style part of element
+    - ex ::first-letter, ::after
+         - with ::after can use content property to render items and style them
+- Should have a CTA item (button)   
+- css exeuted down to styles listed after will take effect - order will resolve the conflict
+- url('<path>') wil allow you to make background an image
