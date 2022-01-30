@@ -1,0 +1,13 @@
+- Block level elements will always take full available space
+- box-shadow - optionally allow inset. properties are x-axis, y-axis, blur, spread, color
+- border-radius rounds edges - looks better for section headers
+- can use combinators or specific classes for unique items - like items in a list
+- Always watch for default and inherted styles of an element
+    - but inherited always overridden by targetted css
+    - BUT setting property to inherit IN selector will take precendence
+- can inspect pseudo states in dev tools by forcing element state
+- can make a circle with 50% border radius
+- css parsed in order, so need to import css files that will override after the classes you want overriden
+- float: override default and tell browser to push it to one side. it will also take it out of the document flow
+    - need to add helper div AFTER float with clearfix with "clear: both" which means clear float so elements after float will not respect previous floated elements
+- block vs inline block: 
