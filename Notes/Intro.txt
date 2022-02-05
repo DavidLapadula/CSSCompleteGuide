@@ -1,3 +1,0 @@
-- Optional addition to HTML that styles it
-- CSS splits functionalities into modules by feature
-- 
