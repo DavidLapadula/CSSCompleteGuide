@@ -1,0 +1,132 @@
+#product-overview {
+  /* shorthand for background-image */
+  /* gradients treated as images, can use gradients as transparency for additional effects with stacking */
+  background-image: linear-gradient(red, blue);
+  /* background: url("freedom.jpg") left 10% bottom 20% / cover no-repeat border-box; */
+  /* background image can take 2 arguments for W/H. If only 1, will maintain aspect ratio */
+  /* cover will always cover the whole container, contain will ensure the whole image is shown */
+  /* background-size: cover; */
+  /* args for relation between item and that side of the container. Percentage will determine how much is cropped from the side you are operating on */
+  /* Ex left 10% and top 10% to determine how much is cropped from that side */
+  /* background origin and background clip can set which part of the image counts as content and which part is clopped (content, padding, etc) */
+  /* background-position: left 10% bottom 20%; */
+  /* can style svg as css element */
+  width: 100%;
+  height: 528px;
+  padding: 10px;
+  margin-top: 43px;
+  position: relative;
+}
+
+.section-title {
+  color: #2ddf5c;
+  text-align: center;
+}
+
+#product-overview h1 {
+  color: white;
+  font-family: "Anton", sans-serif;
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+}
+
+.plan__list {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.plan {
+  background: #d5ffdc;
+  text-align: center;
+  padding: 16px;
+  margin: 8px;
+  display: inline-block;
+  width: 30%;
+  vertical-align: middle;
+}
+
+.plan--highlighted {
+  background: #19b84c;
+  color: white;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan__annotation {
+  background: white;
+  color: #19b84c;
+  padding: 8px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.plan__title {
+  color: #0e4f1f;
+}
+
+.plan__price {
+  color: #858585;
+}
+
+.plan--highlighted .plan__title {
+  color: white;
+}
+
+.plan--highlighted .plan__price {
+  color: #0e4f1f;
+}
+
+.plan__features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plan__feature {
+  margin: 8px 0;
+}
+
+#key-features {
+  background: #ff1b68;
+  margin-top: 80px;
+  padding: 16px;
+}
+
+#key-features .section-title {
+  color: white;
+  margin: 32px;
+}
+
+.key-feature__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.key-feature {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+}
+
+.key-feature__image {
+  background: #ffcede;
+  width: 128px;
+  height: 128px;
+  border: 2px solid #424242;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.key-feature__description {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+}
+
+/* h1 {
+    font-family: sans-serif;
+} */
