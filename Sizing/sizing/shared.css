@@ -13,6 +13,7 @@ body {
   left: 0;
   z-index: 100; /* need position relative to use z-index, doesnt work with fixed */
   width: 100%;
+  /* width: 80 vmin  is 80 percentage of the smaller viewport, hieght or width. Inverse of 'max' is also available. canhide any scrollbard by having overflow-x.y as hidden*/
   height: 100%; /* if position relative, to closest block leel ancestor, need to add 100% height to html and body for height to be picked up*/
   background: rgba(0, 0, 0, 0.5);
 }

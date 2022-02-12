@@ -5,7 +5,7 @@
 
 .testimonial__list {
   width: 80%;
-  margin: auto;
+  margin: auto /* only works on block level alements*/;
 }
 
 .testimonial:first-of-type {
@@ -27,7 +27,7 @@
 
 .testimonial__info {
   text-align: right;
-  padding: 14px;
+  padding: 0.9 rem; /* relative to the root text size to be more dynamic. just em is based on inherited font sizes*/
   display: inline-block;
   vertical-align: middle;
   width: 30%;
