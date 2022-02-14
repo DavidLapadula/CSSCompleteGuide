@@ -20,3 +20,6 @@ for (var i = 0; i < selectPlanButtons.length; i++) {
     modal.classList.add("block"); // this only adds the class while leaving the rest intact. remove() also available
   });
 }
+
+// notation differs in DOM object because object name cannot have a dash like CSS classes
+// if you want to use the normal CSS name then access with bracket notation like object['property-name']
