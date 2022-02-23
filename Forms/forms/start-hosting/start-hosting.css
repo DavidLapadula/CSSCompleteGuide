@@ -1,0 +1,41 @@
+/* attribute list includes "en-us" */
+[lang~="en-us"] {
+  color: red;
+}
+
+/* attribute just starts with "en" and followed by dash */
+[lang|="en"] {
+  color: red;
+}
+
+/* attribute starts with hash as prefix */
+[href^="#"] {
+  color: red;
+}
+
+/* attribute to target the suffix */
+[href$=".de"] {
+  color: red;
+}
+
+/* all elements with src that just contains cdn. the i can turn off case insentitive */
+[src*="cdn" i] {
+  color: red;
+}
+
+.signup-form input[id*="terms"] .signup-form input[id*="terms"] + label {
+  display: inline-block;
+  width: auto;
+}
+
+/* inputs that are not of type checkbox and descendent of the .signup-form */
+.signup-form input:not([type="checkbox"]):focus,
+.signup-form select:focus {
+  outline: none;
+}
+
+/* button class with disabled attribute only */
+.button[disabled] {
+  cursor: not-allowed;
+  color: #a1a1a1;
+}
