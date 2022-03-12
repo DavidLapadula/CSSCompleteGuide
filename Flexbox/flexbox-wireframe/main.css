@@ -15,6 +15,8 @@ body {
   }
   
   /* 
+    Flex Container Properties
+
     Anything inside flex container is flex item 
     Inline flex - then box is like inline element, only takes amount of space needed
     Flex-direction: default is row, if column then items behave like block level. Width defined in items will not adjust if too small, the rest will shrink infinitely. Can reverse order
@@ -31,6 +33,16 @@ body {
     border: 5px solid black;
     display: flex;
   }
+
+  /*
+    Flex item Properties
+
+    order: can position along the flex direction of the container. default is 0
+    align-self: position along the cross axis
+    flex-grow: determine how much of remaining space in container an item should take. Add flex grow amount and distribute. So 2 items with values "1" and "4" then 1/5 and 4/5 goes to item(s). Will take whole line if on a new line
+    flex-shrink: when items in flex-container are bigger than it, defines factor by which it should shrink. Default is 1
+    flex-basis: Initial main size dependent on main axis (width if flex-d is row, height if column) - default is content box unless box-sizing is different.
+  */
 
 .item-1 {
     background: #ff7300;
