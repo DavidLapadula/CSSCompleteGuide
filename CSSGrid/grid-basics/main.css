@@ -1,27 +1,37 @@
 /*
     Grid template allows setting values for each column/row in grid
+    Elements can overlap is star/finish are explicitly set. DOM order determines z-index
     Container DEFINES the layout
     Values are calculated based on whats remainig (2200px - 20% etc) fr is fraction and when have multiple will take available space and assign based on fraction
     Cols size refers to width, row size refers to height
     "Auto" value will make row/col take up whatever space content needs or whatever is available (depending on if container has height value set)
     Repeat tells how many times and value to repeat, so can make multiple cells easier
     minmax(min, max) applying to row then will be for height. Used below for row height of SECOND row b/c in second position
+    When g-t-c or g-t-r DEFINES r/w can name then before value and then reference that instead of line value
 */
 .container {
     margin: 20px;
     display: grid;
+    height: 500px;
     /* grid-template-columns: 200px 2fr 20% 1fr; */
     grid-template-columns: repeat(4, 25%);
     /* grid-template-rows: 5rem 2.5rem; */
-    grid-template-rows: 5rem minmax(10px, 200px);
+    grid-template-rows: [row-1-start] 5rem [row-1-end row-2-start] minmax(10px, auto) [row-2-end row-3-start] 100px [row-3-end];
 }
 
 .el1 {
     background: rgba(255, 154, 72, 0.5);
 }
 
+/*
+ -1 means start counting from the end which allows it to be dynamic
+*/
 .el2 {
     background: rgba(255, 0, 0, 0.5);
+    grid-column-start: 1;
+    grid-column-end: -1; 
+    grid-row-start: row-1-end;
+    grid-row-end: span 1;
 }
 
 /*
@@ -30,8 +40,9 @@
 */
 .el3 {
     background: rgba(0, 128, 0, 0.5);
-    grid-column-start: 3;
-    grid-column-end: 5; 
+    grid-column-start: 2;
+    /* grid-column-end: 5; same as saying span 2, cannot span more than col's available */
+    grid-column-end: span 3; 
     grid-row-start: 1;
     grid-row-end: 3;
 }
