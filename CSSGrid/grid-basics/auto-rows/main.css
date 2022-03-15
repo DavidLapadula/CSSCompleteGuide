@@ -1,0 +1,37 @@
+/*
+  grid-auto-rows/cols can control auto generated rows
+  grid-auto-flow - where to set new content, default is row but can change to column
+  grid-template-columns/rows can be set with implicit grid. The ones that are not set will be auto-generated. Use auto settings to control implicit
+  repeat + auto-fill as first arg will fill the row with items for the viewport and then will wrap them. auto-fill will do the same but just center the items
+  if specifically set element space DOM order not respected, otherwise it is
+  grid-auto-flow: dense will overwrite values to pack the grid
+*/
+
+.container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 15rem);
+    grid-template-rows: 20rem;
+    justify-content: center;
+    grid-gap: 1.5rem;
+    grid-auto-rows: 200px;
+    grid-auto-flow: row dense;
+}
+
+.quote {
+  border: 1px solid #fa923f;
+  background: #ffbd87;
+  font-family: sans-serif;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.quote:nth-of-type(2) {
+  grid-column: span 2;
+}
+
+.quote--featured {
+  border: #ff4213;
+  background: #ff9f87;
+  grid-column: span 2;
+}
