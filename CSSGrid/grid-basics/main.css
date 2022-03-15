@@ -1,5 +1,7 @@
 /*
+    Grid is 2D (rows/columns) and flexbox is 1D
     Grid template allows setting values for each column/row in grid
+    display: grid will make row/col automatically, can make it dynamic
     Elements can overlap is star/finish are explicitly set. DOM order determines z-index
     Container DEFINES the layout
     Values are calculated based on whats remainig (2200px - 20% etc) fr is fraction and when have multiple will take available space and assign based on fraction
@@ -8,35 +10,61 @@
     Repeat tells how many times and value to repeat, so can make multiple cells easier
     minmax(min, max) applying to row then will be for height. Used below for row height of SECOND row b/c in second position
     When g-t-c or g-t-r DEFINES r/w can name then before value and then reference that instead of line value
+    Gap is actual gutter using the space, cleaner than margin
+    Areas need to match your rows and columns - space for each new value. Enables positioning by name
+    Can create auto grid areas even with repeat. Naming convention of -start and -end will allow it to be auto generated
+    fit-content(size) take space but not more than amount specified
+    start/end refers to orientation of settings not right/left
 */
 .container {
     margin: 20px;
     display: grid;
     height: 500px;
     /* grid-template-columns: 200px 2fr 20% 1fr; */
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: [hd-start] repeat(4, [col-start] 25% [col-end]) [hd-start];
     /* grid-template-rows: 5rem 2.5rem; */
     grid-template-rows: [row-1-start] 5rem [row-1-end row-2-start] minmax(10px, auto) [row-2-end row-3-start] 100px [row-3-end];
+    grid-column-gap: 5px;
+    grid-row-gap: 25px;
+    grid-template-areas: "header header header ." 
+                         ". . main main" 
+                         "footer footer footer footer";
+    /* justify-items: center;  position items in their track on rows*/
+    /* align-items: center;  position items in their track on col*/
+    /* justify-content: position on x-axis */
+    /* align-content: position on y-axis */
 }
+
+/*
+    Line names can be used with repeat, just need to specify occurence (repeat above)
+*/
 
 .el1 {
     background: rgba(255, 154, 72, 0.5);
+    grid-column: col-start 2 / col-end 2
 }
 
 /*
  -1 means start counting from the end which allows it to be dynamic
+ Short hand requires slash
+ justify/align self will overwrite values set in container styling
 */
 .el2 {
     background: rgba(255, 0, 0, 0.5);
     grid-column-start: 1;
     grid-column-end: -1; 
+    /* grid-column: 1 / -1; */
     grid-row-start: row-1-end;
     grid-row-end: span 1;
+    /* grid-area: <g-r-s> / <g-c-s> / <g-r-e> / <g-c-e>  */
+    /* justify-self: position on x */
+    /* align-self: position on y */
 }
 
 /*
     Child POISITIONS the elements
     g-c-* or g-r-* thinks in terms of numbers so can tell them where to start or finish based on numbers in grid
+    hd is encapsulating area defined before/after repeat. Using -start/-end convention allows it to auto generate
 */
 .el3 {
     background: rgba(0, 128, 0, 0.5);
@@ -45,6 +73,7 @@
     grid-column-end: span 3; 
     grid-row-start: 1;
     grid-row-end: 3;
+    grid-area: hd;
 }
 
 .el4 {
