@@ -1,0 +1,28 @@
+/*
+    transform style will keep container as 3d so elements can still be seen
+*/
+
+.container {
+    margin: 150px auto;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    transform: rotateY(90deg);
+    transform-style: preserve-3d;
+}
+
+/*
+    Z pierces element from behind and will spin around it 
+    Smaller the perspective, the closer you are to the element. Is a function or can be a property on the parent element so applies to all child elements
+    perspective-origin will change the angle you are looking a the element
+    translateZ is the axis coming out of the screen coming at the user
+    backface-visibility is property of visibility of element if rotate is such that you are looking at the back
+*/
+
+.box {
+    background: red;
+    width: 100%;
+    height: 100%;
+    transform: perspective(100px) rotateX(0deg) rotateY(30deg) rotateZ(30deg) translateZ(30deg);
+    perspective-origin: right;
+}
