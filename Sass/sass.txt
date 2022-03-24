@@ -1,0 +1,18 @@
+- Does not run in browser, only for dev. Needs to be compiled before it is being shipped
+- Prevent changing repeated things multiple times and nested rules/selectors
+- indentation controls flow 
+- Allows for nested selectors instead of putting a space between selectors forr descendents
+- Allows for nested properties instead of shorthand
+    - so flox: {direction: wrap}
+- Can use variables, just diff syntax from vanilla css
+- Variables with multiple values is called a list
+- Can store a map of values and then use map-gat to access the value you need
+- Built in functions like lighten() to create dependence between variables/values
+- Can use simple arithmetical functions for numerical values. Enables flexibility where if you change one value, everything related will change too
+- Can import scss partial to store common values you want to usse across multiple files. Also reduce import http requests because building all in one files 
+- Nesting allows putting media query inside effected media query
+- Inheritance: @extend directive can be placed in selector to inherit from another selector
+- Mixins: @mixin directive to define function with values, and then use @include to apply it where you want to code used
+    - Can pass in arguments for an value inside the mixin
+    - @content allows you to pass conent defined line a selector to be passed into the mixin 
+- Ampersand tells scss to connect pseudoselector to element instead of nesting it inside
