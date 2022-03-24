@@ -15,5 +15,5 @@ Source code for course covering main features of CSS
 > Transformations
 > Transitions and Animations
 > Next-gen CSS including variables and polyfills
-> SASS and SCSCC
+> SASS and SCSC
 ```
