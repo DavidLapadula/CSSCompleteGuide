@@ -1,6 +1,6 @@
 # CSS Complete Guide
 
-Course covering main features of CSS
+Course covering main features of CSS. 
 
 ## Topics Included
 
